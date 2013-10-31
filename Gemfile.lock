@@ -53,9 +53,6 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    capybara-webkit (0.12.1)
-      capybara (>= 1.0.0, < 1.2)
-      json
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.0.9)
@@ -168,7 +165,6 @@ GEM
     method_source (0.8.1)
     mime-types (1.22)
     multi_json (1.7.2)
-    mysql2 (0.3.11)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.1)
@@ -279,7 +275,7 @@ DEPENDENCIES
   bootstrap-sass
   capistrano
   capistrano-unicorn
-  capybara-webkit
+  capybara
   coffee-rails
   cucumber
   cucumber-rails
@@ -301,7 +297,6 @@ DEPENDENCIES
   jasmine-spec-extras
   jquery-rails
   libnotify
-  mysql2
   rails (~> 3.2)
   rails3_acts_as_paranoid
   raindrops (~> 0.10.0)
@@ -310,6 +305,7 @@ DEPENDENCIES
   rspec-mocks
   rspec-rails
   sass-rails
+  selenium-webdriver
   spork
   sqlite3
   therubyracer
