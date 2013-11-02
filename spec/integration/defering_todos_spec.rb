@@ -9,18 +9,17 @@ feature 'Defering a todo to be shown at a later date', js: true do
 
   scenario 'change a visibility date' do
     logs_in_to_site('blah12345', 'password')
-    defers_todo(todo, days: 4)
+    defers_todo(todo, num_days: 4)
     todo_should_not_be_visible(todo)
     come_back_another_day
     todo_should_be_visible(todo)
   end
 
-  def logs_in_to_site(username, password)
+  def logs_in_to_site(email, password)
     visit '/'
-    debugger
     fill_in 'Password', with: password
-    fill_in 'Username', with: username
-    click_button 'Login'
+    fill_in 'Email', with: email
+    click_button 'Sign in'
   end
 
   def defers_todo(todo, options = {})
@@ -28,9 +27,5 @@ feature 'Defering a todo to be shown at a later date', js: true do
     click_link '.todo-#{todo.id} .defer-link'
     fill_in 'Days to defer', with: num_days
   end
-
-
-
-
 
 end
