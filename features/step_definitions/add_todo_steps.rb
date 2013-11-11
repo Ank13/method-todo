@@ -3,7 +3,7 @@ Given /I am logged in/ do
   visit(new_user_session_path)
   fill_in('user[email]', :with => 'newuser@example.com')
   fill_in('user[password]', :with => 'Password1')
-  click_button('Sign in')
+  click_button('Log in')
   page.should have_content('Welcome')
 end
 

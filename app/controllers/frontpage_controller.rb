@@ -2,6 +2,7 @@
 # Controller for front page of application
 
 class FrontpageController < ApplicationController
+
   before_filter :authenticate_user!
 
   # GET /

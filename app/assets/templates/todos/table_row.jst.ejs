@@ -5,6 +5,9 @@
     <span id='todo-<%= todo.id %>-editor' style='display:none'></span>
   </td>
   <td>
+    <a class='defer-link' href='#' title='Defer todo for some number of days'>
+      <span class='icon-calendar'></span>
+    </a>
     <% if(todo.tickler == true) { %>
       <a id='todo-tickler-<%= todo.id %>' class='toggle-tickler-status-link' href='#' title='Remove from tickler'>
         <span class='icon-arrow-left'></span>
